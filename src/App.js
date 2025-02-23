@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';  // Adjust path if necessary
+import Footer from './components/Footer';  // Adjust path if necessary
+import HomePage from './pages/Home';  // Adjust path if necessary
+import PropertiesPage from './pages/Properties';  // Adjust path if necessary
+import AboutPage from './pages/About';  // Adjust path if necessary
+import ContactPage from './components/ContactForm';  // Adjust path if necessary
+import PropertyDetailPage from './pages/Properties';  // Adjust path if necessary
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {/* Header component */}
+      <Header />
+      
+      {/* Main content */}
+      <div className="main-content">
+        <Routes>
+          {/* Route for the homepage */}
+          <Route path="/" element={<HomePage />} />
+          
+          {/* Route for the properties page */}
+          <Route path="/properties" element={<PropertiesPage />} />
+          
+          {/* Route for the about page */}
+          <Route path="/about" element={<AboutPage />} />
+          
+          {/* Route for the contact page */}
+          <Route path="/contact" element={<ContactPage />} />
+          
+          {/* Route for an individual property detail page */}
+          <Route path="/property/:id" element={<PropertyDetailPage />} />
+        </Routes>
+      </div>
+      
+      {/* Footer component */}
+      <Footer />
+    </Router>
   );
 }
 
