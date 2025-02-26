@@ -1,20 +1,42 @@
+// HomePage.js
 import React from 'react';
-import AboutPage from './About';
-import Features from '../components/Features';
 import Hero from '../components/Hero';
-import ContactForm from '../components/ContactForm';
-import Properties from '../components/Properties';
+import PropertyListPage from './Properties'; // Replace with correct path to Property List Page
+import AboutPage from './About'; // Replace with correct path to About page
+import ContactForm from '../components/ContactForm'; // Replace with correct path to Contact Form
+import { useModal } from "../context/modal-context";
+import BrochureModal from '../components/ContactModel';
+import Features from '../components/Features';
 
 function HomePage() {
+  const { openModal } = useModal();  
+
   return (
-    <div data-name="home-page">
-      <Hero />
-      <Features />
-      <Properties />
-      <div id="about">
+    <div>
+      {/* Section for Home */}
+      <section id="home">
+        <Hero />
+      </section>
+
+      <section id="features">
+        <Features />
+      </section>
+
+      {/* Section for Properties */}
+      <section id="properties">
+        <PropertyListPage />
+      </section>
+
+      {/* Section for About */}
+      <section id="about">
         <AboutPage />
-      </div>
-      <ContactForm />
+      </section>
+
+      {/* Section for Contact */}
+      <section id="contact">
+        <ContactForm />
+      </section>
+      <BrochureModal/>
     </div>
   );
 }
