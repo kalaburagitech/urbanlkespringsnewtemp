@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBed, FaBath, FaHome } from 'react-icons/fa';  // Importing icons
+import { useModal } from "../context/modal-context"; // Importing the custom modal hook
 
 function PropertiesPage() {
   // Sample properties data (replace with real data)
@@ -37,6 +38,14 @@ function PropertiesPage() {
     }
   ];
 
+  // Get the openModal function from the modal context
+  const { openModal } = useModal();
+
+  const handleViewDetails = (property) => {
+    // You can pass the property data to the modal here
+    openModal(property);
+  };
+
   return (
     <div className="container mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-center mb-12">Properties</h1>
@@ -66,9 +75,13 @@ function PropertiesPage() {
                 </div>
               </div>
 
-              <Link to='/contact' className="text-blue-600 hover:underline">
+              {/* The View Details link now triggers the modal */}
+              <button
+                onClick={() => handleViewDetails(property)} // Trigger modal with property data
+                className="text-blue-600 hover:underline"
+              >
                 View Details
-              </Link>
+              </button>
             </div>
           </div>
         ))}

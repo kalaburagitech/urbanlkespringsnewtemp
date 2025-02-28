@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section
       className="relative bg-cover bg-center h-screen flex items-center justify-center"
-      style={{ backgroundImage: "url(/images/property2.jpg)" }}
+      style={{ backgroundImage: "url(/images/property5.jpg)" }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -20,7 +20,7 @@ const HeroSection = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative text-center p-8 rounded-lg"
       >
-        {/* Gradient Text Effect */}
+        {/* Gradient Text Effect for Typewriter */}
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-yellow-300 to-orange-500 text-transparent bg-clip-text drop-shadow-xl">
           <Typewriter
             words={[
@@ -37,12 +37,17 @@ const HeroSection = () => {
           />
         </h1>
 
-        {/* Subtitle */}
+        {/* Stylish Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-lg md:text-xl text-white mb-8"
+          className="text-lg md:text-2xl text-white mb-8 font-playfair font-semibold leading-relaxed tracking-wide drop-shadow-2xl"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            textShadow: "3px 3px 10px rgba(0, 0, 0, 0.3)",
+            letterSpacing: "1px",
+          }}
         >
           Luxury, comfort, and convenience all in one place.
         </motion.p>

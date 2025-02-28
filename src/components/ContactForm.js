@@ -20,12 +20,12 @@ function ContactForm() {
 
   // Handle phone call
   function handleCall() {
-    window.location.href = "tel:+15551234567";
+    window.location.href = "tel:+9945264555";
   }
 
   // Handle WhatsApp
   function handleWhatsApp() {
-    window.open("https://wa.me/15551234567", "_blank");
+    window.open("https://wa.me/9945264555", "_blank");
   }
 
   return (
@@ -44,7 +44,7 @@ function ContactForm() {
                 <i className="fas fa-phone text-2xl text-blue-600"></i>
               </div>
               <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-              <p className="text-gray-600 mb-4">(555) 123-4567</p>
+              <p className="text-gray-600 mb-4">+91 9945264555</p>
               <button 
                 onClick={handleCall}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full inline-flex items-center"
@@ -59,7 +59,7 @@ function ContactForm() {
                 <i className="fab fa-whatsapp text-2xl text-green-600"></i>
               </div>
               <h3 className="text-xl font-semibold mb-2">WhatsApp</h3>
-              <p className="text-gray-600 mb-4">(555) 123-4567</p>
+              <p className="text-gray-600 mb-4"> +91 9945264555</p>
               <button 
                 onClick={handleWhatsApp}
                 className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full inline-flex items-center"
@@ -74,7 +74,7 @@ function ContactForm() {
                 <i className="fas fa-envelope text-2xl text-purple-600"></i>
               </div>
               <h3 className="text-xl font-semibold mb-2">Email</h3>
-              <p className="text-gray-600 mb-4">info@dreamhome.com</p>
+              <p className="text-gray-600 mb-4">Sales@urbanlakesprings.in</p>
               <a 
                 href="mailto:info@dreamhome.com"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full inline-flex items-center"
@@ -87,7 +87,7 @@ function ContactForm() {
 
           {/* Contact Form */}
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            {/* <div className="bg-white p-8 rounded-xl shadow-lg">
               <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
               <form 
                 onSubmit={handleSubmit}
@@ -190,10 +190,10 @@ function ContactForm() {
                   </button>
                 </div>
               </form>
-            </div>
+            </div> */}
 
             {/* Contact Information */}
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-8 rounded-xl shadow-lg text-white">
+            {/* <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-8 rounded-xl shadow-lg text-white">
               <h3 className="text-2xl font-bold mb-8">Our Office</h3>
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
@@ -249,7 +249,7 @@ function ContactForm() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

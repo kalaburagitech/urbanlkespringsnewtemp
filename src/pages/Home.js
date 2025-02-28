@@ -7,6 +7,7 @@ import ContactForm from '../components/ContactForm'; // Replace with correct pat
 import { useModal } from "../context/modal-context";
 import BrochureModal from '../components/ContactModel';
 import Features from '../components/Features';
+import BlogPost from './BlogPost';
 
 function HomePage() {
   const { openModal } = useModal();  
@@ -30,6 +31,11 @@ function HomePage() {
       {/* Section for About */}
       <section id="about">
         <AboutPage />
+      </section>
+
+      {/* Section for Blog */}
+      <section id="blog">
+        <BlogPost />
       </section>
 
       {/* Section for Contact */}

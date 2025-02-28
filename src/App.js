@@ -8,6 +8,7 @@ import ContactPage from './components/ContactForm';  // Adjust path if necessary
 import PropertyDetailPage from './pages/Properties';  // Adjust path if necessary
 import { ModalProvider } from './context/modal-context';
 import Features from './components/Features';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
           
           {/* Route for the about page */}
           <Route path="/about" element={<AboutPage />} />
+
+          <Route path="/blogs" element={<BlogPost />} />
 
           <Route path="/features" element={<Features />} />
           
