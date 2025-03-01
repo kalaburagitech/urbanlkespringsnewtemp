@@ -18,24 +18,26 @@ export default function BrochureModal() {
     event.preventDefault();
     setLoading(true);
     setError(null);
-
-    // Validate phone number
-    if (!/^[6789]\d{9}$/.test(contact)) {
-      setError("Please enter a valid phone number.");
-      setLoading(false);
-      return;
-    }
-
+  
+    console.log("Phone number being sent:", contact);  // Debugging log
+  
     try {
       // Send phone number to backend
-      const response = await axios.post("https://urbanlakesprings.in/contact.php", {
-        phone: contact,
-      });
-
-      // Handle successful response
+      const response = await axios.post(
+        'https://urbanlakesprings.in/contact.php',
+        `phone=${contact}`,
+        {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        }
+      );
+  
+      console.log(response.data);  // Debugging log for response
+  
       if (response.data.success) {
         setIsSubmitted(true);
-
+  
         // Trigger PDF download after successful submission
         setTimeout(() => {
           const link = document.createElement('a');
@@ -44,12 +46,12 @@ export default function BrochureModal() {
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
-
+  
           closeModal();
           setIsSubmitted(false);
         }, 1500);
       } else {
-        throw new Error(response.data.message || "Failed to submit details");
+        setError(response.data.message || "Failed to submit details");
       }
     } catch (err) {
       setError("Failed to submit details. Please try again.");
@@ -57,6 +59,9 @@ export default function BrochureModal() {
       setLoading(false);
     }
   };
+  
+  
+  
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
