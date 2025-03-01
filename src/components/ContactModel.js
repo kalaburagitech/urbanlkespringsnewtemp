@@ -27,29 +27,30 @@ export default function BrochureModal() {
     }
 
     try {
-      // const response = await axios.post("https://reakestateemail.onrender.com/send-email", {
-      //   contact,
-      // });
+      // Send phone number to backend
+      const response = await axios.post("https://urbanlakesprings.in/contact.php", {
+        phone: contact,
+      });
 
-      // if (response.data.success) {
+      // Handle successful response
+      if (response.data.success) {
         setIsSubmitted(true);
 
         // Trigger PDF download after successful submission
         setTimeout(() => {
           const link = document.createElement('a');
-        link.href = '/pdf/price-list.pdf'; // Path to your PDF
-        link.download = 'price-list.pdf'; // Name of the file to download
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+          link.href = '/pdf/price-list.pdf'; // Path to your PDF
+          link.download = 'price-list.pdf'; // Name of the file to download
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
 
-        
           closeModal();
           setIsSubmitted(false);
         }, 1500);
-      // } else {
-      //   throw new Error(response.data.message || "Failed to submit details");
-      // }
+      } else {
+        throw new Error(response.data.message || "Failed to submit details");
+      }
     } catch (err) {
       setError("Failed to submit details. Please try again.");
     } finally {
