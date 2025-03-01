@@ -9,7 +9,7 @@ function PropertiesPage() {
     {
       id: 1,
       title: "3 BHK Apartment",
-      location: "Beverly Hills, CA",
+      location: "Bangalore South",
       price: "₹1.62 Cr - 2.30 Cr",
       beds: 3,
       baths: 3,
@@ -19,7 +19,7 @@ function PropertiesPage() {
     {
       id: 2,
       title: "3 BHK Apartment",
-      location: "Manhattan, NY",
+      location: "Bangalore South",
       price: "₹1.62 Cr - 2.30 Cr",
       beds: 3,
       baths: 3,
@@ -29,7 +29,7 @@ function PropertiesPage() {
     {
       id: 3,
       title: "3.5 BHK Apartment",
-      location: "Manhattan, NY",
+      location: "Bangalore South",
       price: "₹1.62 Cr - 2.30 Cr",
       beds: 3,
       baths: 3,
