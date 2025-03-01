@@ -11,3 +11,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Apply dark background color to the mobile navigation */
+.bg-dark {
+  background-color: #1a202c; /* Dark background for mobile nav */
+}
+
+/* Style for icons when hovered */
+.dock-item:hover {
+  background-color: #4a5568; /* Hover background color for items */
+  color: #fff; /* Change text color when hovered */
+}
+
+/* For the dock icon when hovered */
+.dock-icon i:hover {
+  color: #ff9900; /* Highlight color for icons when hovered */
+}
+
+/* Smooth transition for the hover effects */
+.dock-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode icon colors */
+.dock-icon {
+  color: #d1d5db; /* Light gray color for icons */
+}
+/* global.css or styles.css */
+/* Global styles for Hero section */
+.hero-section {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh; /* Full screen height */
+  overflow: hidden; /* Prevent content from overflowing */
+  padding-top: 70px; /* Adjust padding to make space for the sticky header */
+}
+
+/* Ensure header/navbar stays sticky */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Ensure it stays on top of other content */
+  background-color: rgba(255, 255, 255, 0.9); /* Optionally add background color */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    background-size: contain; /* Adjust for mobile devices */
+    background-position: center;
+    height: auto; /* Ensure the height adjusts based on content */
+    padding-top: 80px; /* Extra space for smaller screens */
+  }
+}

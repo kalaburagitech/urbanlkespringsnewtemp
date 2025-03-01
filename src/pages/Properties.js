@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaBed, FaBath, FaHome } from 'react-icons/fa';  // Importing icons
 import { useModal } from "../context/modal-context"; // Importing the custom modal hook
+import GradientText from './GradientText/GradientText';
 
 function PropertiesPage() {
   // Sample properties data (replace with real data)
@@ -48,7 +49,11 @@ function PropertiesPage() {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center mb-12">Properties</h1>
+      <h1 className="text-4xl font-bold text-center mb-12">
+        <GradientText colors={["#ff8c00", "#ff0000", "#0000ff"]} animationSpeed={5}>
+          Properties
+          </GradientText>
+          </h1>
 
       <div className="grid md:grid-cols-3 gap-8">
         {properties.map((property) => (
