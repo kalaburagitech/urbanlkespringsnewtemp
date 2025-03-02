@@ -3,20 +3,13 @@ import { useModal } from "../context/modal-context"; // Adjust path for useModal
 import { Typewriter } from "react-simple-typewriter"; // Correct import
 import { motion } from "framer-motion";
 import GradientText from "../pages/GradientText/GradientText";
-import './Hero.css'; // Adjust path based on where the file is located
+import './Hero.css'; // Import the HeroSection CSS file
 
 const Hero = () => {
   const { openModal } = useModal();
 
   return (
-    <section
-      className="hero-section relative bg-cover bg-center h-screen flex items-center justify-center"
-      style={{
-        backgroundImage: "url(/images/property5.jpg)",
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-      }}
-    >
+    <section className="hero-section">
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
@@ -24,7 +17,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative text-center p-8 rounded-lg w-full max-w-3xl mx-auto"
+        className="relative text-center p-8 rounded-lg w-full max-w-3xl mx-auto hero-content"
       >
         {/* Gradient Text Effect for Typewriter */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-yellow-300 to-orange-500 text-transparent bg-clip-text drop-shadow-xl">

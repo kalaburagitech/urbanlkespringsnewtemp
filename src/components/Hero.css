@@ -1,20 +1,86 @@
 .hero-section {
-    background-image: url('https://srv1741-files.hstgr.io/b983a209ea923f34/files/public_html/property5.jpg');
+    background-image: url('/public/images/property5.jpg'); /* Ensure correct image path */
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh; /* Full screen height for larger screens */
+    background-size: cover; /* Cover the section with the image */
+    background-position: center center; /* Center the background image */
+    min-height: 100vh; /* Ensures the section takes at least the full height of the viewport */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
     position: relative;
+    padding: 0 20px; /* Padding for smaller screens */
   }
   
+  /* Dark overlay */
+  .hero-section .absolute {
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark background for text contrast */
+  }
+  
+  /* Styling for the content inside the hero section */
+  .hero-section .hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem; /* Adjust font size */
+    color: transparent;
+    background: linear-gradient(to right, #ffd700, #ffa500); /* Gradient effect */
+    -webkit-background-clip: text;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 30px;
+  }
+  
+  .hero-section button {
+    background: linear-gradient(to right, #ffd700, #ffa500);
+    padding: 12px 24px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .hero-section button:hover {
+    transform: scale(1.1); /* Slight scale effect on hover */
+  }
+  
+  /* Media query for mobile devices */
   @media (max-width: 768px) {
     .hero-section {
-      background-size: contain; /* Adjust for mobile devices */
+      background-size: contain; /* Ensure the background fits the content */
       background-position: center;
-      height: auto; /* Ensure the height adjusts based on content */
-      padding-top: 80px; /* Extra space for smaller screens */
+      padding-top: 80px; /* Padding for small screens */
+    }
+  
+    .hero-section .hero-content {
+      padding: 15px;
+    }
+  
+    .hero-section h1 {
+      font-size: 2rem; /* Smaller text for mobile */
+    }
+  
+    .hero-section p {
+      font-size: 1rem; /* Adjust paragraph text for mobile */
+    }
+  
+    .hero-section button {
+      font-size: 1rem;
+      padding: 10px 20px;
     }
   }
   
