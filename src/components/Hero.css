@@ -3,48 +3,51 @@
     background-repeat: no-repeat;
     background-size: cover; /* Cover the section with the image */
     background-position: center center; /* Center the background image */
-    min-height: 100vh; /* Ensures the section takes at least the full height of the viewport */
+    min-height: fit-content; /* Ensure the section takes at least the full height of the viewport */
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
     position: relative;
-    padding: 0 20px; /* Padding for smaller screens */
-  }
+    padding: 0 100px; /* Padding for larger screens */
+}
   
-  /* Dark overlay */
-  .hero-section .absolute {
+/* Dark overlay */
+.hero-section .absolute {
     inset: 0;
     background: rgba(0, 0, 0, 0.5); /* Dark background for text contrast */
-  }
-  
-  /* Styling for the content inside the hero section */
-  .hero-section .hero-content {
+}
+
+/* Styling for the content inside the hero section */
+.hero-section .hero-content {
     position: relative;
     text-align: center;
-    max-width: 100%;
+    max-width: 100%; /* Full width for the content */
     padding: 20px;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
     border-radius: 10px;
     width: 100%;
-    max-width: 600px;
-  }
-  
-  .hero-section h1 {
+    max-width: 600px; /* Max width for the content */
+}
+
+/* Heading Style */
+.hero-section h1 {
     font-size: 2.5rem; /* Adjust font size */
     color: transparent;
     background: linear-gradient(to right, #ffd700, #ffa500); /* Gradient effect */
-    -webkit-background-clip: text;
-    font-weight: 700;
+    -webkit-background-clip: text; /* Apply the gradient to the text */
+    font-weight: 600;
     margin-bottom: 20px;
-  }
-  
-  .hero-section p {
+}
+
+/* Paragraph Style */
+.hero-section p {
     font-size: 1.25rem;
     color: white;
     margin-bottom: 30px;
-  }
-  
-  .hero-section button {
+}
+
+/* Button Style */
+.hero-section button {
     background: linear-gradient(to right, #ffd700, #ffa500);
     padding: 12px 24px;
     border-radius: 5px;
@@ -52,35 +55,39 @@
     font-weight: bold;
     transition: 0.3s ease;
     cursor: pointer;
-  }
-  
-  .hero-section button:hover {
+}
+
+/* Hover effect on button */
+.hero-section button:hover {
     transform: scale(1.1); /* Slight scale effect on hover */
-  }
-  
-  /* Media query for mobile devices */
-  @media (max-width: 768px) {
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
     .hero-section {
-      background-size: contain; /* Ensure the background fits the content */
-      background-position: center;
-      padding-top: 80px; /* Padding for small screens */
+        background-size: cover; /* Ensure the background image always covers the section */
+        background-position: center;
+        padding: 0 20px; /* Reduced padding for mobile devices */
+        margin-top: 50px;
     }
-  
+
     .hero-section .hero-content {
-      padding: 15px;
+        padding: 15px;
+        max-width: 100%; /* Ensure content fits within the screen */
+        width: 100%;
+        margin: 0; /* Remove any margins */
     }
-  
+
     .hero-section h1 {
-      font-size: 2rem; /* Smaller text for mobile */
+        font-size: 1.8rem; /* Smaller text for mobile */
     }
-  
+
     .hero-section p {
-      font-size: 1rem; /* Adjust paragraph text for mobile */
+        font-size: 1rem; /* Adjust paragraph text for mobile */
     }
-  
+
     .hero-section button {
-      font-size: 1rem;
-      padding: 10px 20px;
+        font-size: 1rem;
+        padding: 10px 20px;
     }
-  }
-  
+}

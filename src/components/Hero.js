@@ -17,7 +17,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative text-center p-8 rounded-lg w-full max-w-3xl mx-auto hero-content"
+        className="relative text-center p-9 rounded-lg w-full max-w-6xl mx-auto hero-content"
       >
         {/* Gradient Text Effect for Typewriter */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-yellow-300 to-orange-500 text-transparent bg-clip-text drop-shadow-xl">
