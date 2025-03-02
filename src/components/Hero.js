@@ -3,9 +3,9 @@ import { useModal } from "../context/modal-context"; // Adjust path for useModal
 import { Typewriter } from "react-simple-typewriter"; // Correct import
 import { motion } from "framer-motion";
 import GradientText from "../pages/GradientText/GradientText";
-import '../index.css'; // Adjust path based on where the file is located
+import './Hero.css'; // Adjust path based on where the file is located
 
-const HeroSection = () => {
+const Hero = () => {
   const { openModal } = useModal();
 
   return (
@@ -74,4 +74,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;

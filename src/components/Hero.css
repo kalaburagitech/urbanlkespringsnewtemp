@@ -1,0 +1,20 @@
+.hero-section {
+    background-image: url('https://srv1741-files.hstgr.io/b983a209ea923f34/files/public_html/property5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* Full screen height for larger screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      background-size: contain; /* Adjust for mobile devices */
+      background-position: center;
+      height: auto; /* Ensure the height adjusts based on content */
+      padding-top: 80px; /* Extra space for smaller screens */
+    }
+  }
+  

@@ -1,0 +1,87 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Admin Dashboard Layout */
+  .admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the page takes full height */
+    background-color: #f4f7fc;
+  }
+  
+  /* Header Styling */
+  .dashboard-header {
+    background-color: #0066ff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px; /* Margin at the bottom of the header */
+  }
+  
+  /* Main Content */
+  .dashboard-content {
+    flex: 1; /* Allow the content to grow and fill the space */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Margin at the bottom of the content */
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f4f7fc;
+    font-weight: bold;
+  }
+  
+  td a {
+    text-decoration: none;
+    color: #0066ff;
+  }
+  
+  td a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer Styling */
+  .dashboard-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f7fc;
+    border-top: 1px solid #ddd;
+    margin-top: auto; /* Push footer to the bottom of the page */
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  /* AdminDashboard.css */
+
+/* Styling the phone number link */
+.phone-link {
+    color: #0066ff;
+    text-decoration: none;
+  }
+  
+  .phone-link:hover {
+    text-decoration: underline;
+  }
+  
