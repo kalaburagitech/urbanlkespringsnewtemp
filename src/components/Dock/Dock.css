@@ -15,11 +15,9 @@
   width: fit-content;
   gap: 1rem;
   border-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  background-color: #06060622;
   border: 1px solid #222;
   padding: 0 0.5rem 0.5rem;
-  backdrop-filter: blur(8px); /* Glass effect */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .dock-item {
@@ -28,25 +26,19 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.2); /* Slight dark background for items */
+  background-color: #06060634;
   border: 1px solid #222;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   cursor: pointer;
   outline: none;
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.dock-item:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Darker background on hover */
-  color: #ff9900; /* Change icon color */
-  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .dock-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease; /* Smooth icon scaling */
 }
 
 .dock-label {
@@ -56,20 +48,10 @@
   width: fit-content;
   white-space: pre;
   border-radius: 0.375rem;
-  border: 1px solid #222;
-  background-color: #060606;
+  border: 1px solid #2222222a;
+  background-color: #06060631;
   padding: 0.125rem 0.5rem;
   font-size: 0.75rem;
   color: #fff;
   transform: translateX(-50%);
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.2s ease; /* Smooth transition for the label */
-}
-
-.dock-item:hover .dock-label {
-  opacity: 1; /* Show label when hovered */
-}
-
-html {
-  scroll-behavior: smooth; /* Smooth scroll across the page */
 }

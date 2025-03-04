@@ -20,19 +20,11 @@
     
     <!-- FontAwesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link
-  href="https://fonts.googleapis.com/css2?family=Agnifa:wght@400;700&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap"
-  rel="stylesheet"
-/>
-
-<!-- Add this line for Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Agnifa:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <!-- You can add your own CSS file here -->
     <link href="/styles/main.css" rel="stylesheet">
 </head>
@@ -40,8 +32,16 @@
 <body>
     <!-- The root element where React will render the app -->
     <div id="root"></div>
-    
-    <!-- No need to manually include JS files, bundler takes care of that -->
+
+    <!-- Google Analytics Script (Moved to the bottom for performance) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JWZ73GNGN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6JWZ73GNGN');
+    </script>
 </body>
 
 </html>
