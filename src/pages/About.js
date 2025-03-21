@@ -23,9 +23,11 @@ function AboutPage() {
         <div className="flex flex-col md:flex-row gap-8 items-center md:mt-12">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <img 
+              rel="preload"
               src="/images/property1.jpg"  // Correct path to public/images folder
               alt="NCC Urban Lake Springs"
               className="rounded-lg shadow-lg w-full h-auto"
+              loading="lazy"
             />
           </div>
           <div className="md:w-1/2 text-lg sm:text-xl leading-relaxed text-gray-700">
@@ -50,6 +52,7 @@ function AboutPage() {
               src="/images/property4.jpg" 
               alt="NCC Urban Lake Springs"
               className="rounded-lg shadow-lg w-full h-auto"
+              loading="lazy"
             />
           </div>
           <div className="md:w-1/2 text-lg sm:text-xl leading-relaxed text-gray-700">

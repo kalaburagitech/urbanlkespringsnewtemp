@@ -49,9 +49,11 @@ function BlogPage() {
                 onClick={() => handleCardClick(slug)} // Handle click for smooth scroll and content expansion
               >
                 <img
+                  rel="preload"
                   src={blogPosts[slug].imageUrl}
-                  alt={blogPosts[slug].title}
+                  alt="NCC Urban Lake Springs" 
                   className="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300"
+                  loading="lazy"
                 />
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-[#1F2937] mb-4">
@@ -69,8 +71,9 @@ function BlogPage() {
                 <div className="mt-4 p-6 bg-gray-100 rounded-lg">
                   <img
                     src={blogPosts[slug].imageUrl}
-                    alt={blogPosts[slug].title}
+                    alt="NCC Urban Lake Springs" 
                     className="w-full h-72 object-cover rounded-lg shadow-lg"
+                    loading="lazy"
                   />
                   <div className="flex justify-between items-center mb-8">
                     <p className="text-gray-600 text-sm">{blogPosts[slug].date}</p>

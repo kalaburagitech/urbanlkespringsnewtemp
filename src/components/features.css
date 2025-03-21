@@ -1,0 +1,10 @@
+/* Optional: Fine-tune the transition effect for the video */
+.video-container {
+    position: relative;
+    padding-bottom: 156.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Apply smooth transition for both */
+  }
+  
+ 
