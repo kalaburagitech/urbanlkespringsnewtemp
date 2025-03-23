@@ -1,10 +1,46 @@
 /* Optional: Fine-tune the transition effect for the video */
 .video-container {
-    position: relative;
-    padding-bottom: 156.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Apply smooth transition for both */
-  }
-  
- 
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Apply smooth transition for both */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the area without stretching */
+}
+
+/* Optional: Fade-in effect for the video container */
+.video-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-container.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Center video container and ensure responsiveness */
+.relative.mx-auto {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Optional: Styling for video controls if needed */
+.video-container video::-webkit-media-controls {
+  background-color: transparent; /* Make controls background transparent */
+  color: #fff; /* Set controls color */
+}
+
+.video-container video:focus {
+  outline: none; /* Remove focus outline for better visual appeal */
+}

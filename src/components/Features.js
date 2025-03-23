@@ -22,32 +22,32 @@ function Features() {
   const features = [
     {
       icon: "fa-house",
-      title: "Wide Selection",
-      description: "Browse through thousands of properties that match your criteria"
+      title: "Property Selection",  // Updated title
+      description: "Browse through thousands of properties that match your criteria."
     },
     {
       icon: "fa-dollar-sign",
-      title: "Best Prices",
-      description: "Get the best market prices and deals for your dream home"
+      title: "Competitive Pricing",  // Updated title
+      description: "Get the best market prices and deals for your dream home."
     },
     {
       icon: "fa-handshake",
-      title: "Expert Agents",
-      description: "Work with professional agents who care about your needs"
+      title: "Real Estate Professionals",  // Replaced "Expert Agents" with "Real Estate Professionals"
+      description: "Work with professionals who care about your needs and provide expert advice."
     }
   ];
 
   return (
     <section id="features" data-name="features" className="py-20 bg-gray-50">
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <h2 data-name="features-title" className="text-3xl font-bold text-center mb-12">
-          <GradientText colors={["#ff8c00", "#ff0000", "#0000ff"]} animationSpeed={5}>            
+          <GradientText colors={["#ff8c00", "#ff0000", "#0000ff"]} animationSpeed={5}>
             Why Choose Us
           </GradientText>
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
               data-name={`feature-card-${index}`}
               className="feature-card bg-white p-6 rounded-lg shadow-md text-center"
@@ -64,7 +64,9 @@ function Features() {
 
       <div className="container mx-auto px-4 mt-3">
         <h2 className="text-3xl font-bold text-center mb-12">
-         <GradientText colors={["#FFD700", "#FF5733", "#4079ff"]}>  Watch Our NCC Urban Lake Springs Video </GradientText>
+          <GradientText colors={["#FFD700", "#FF5733", "#4079ff"]}>
+            Watch Our NCC Urban Lake Springs Video
+          </GradientText>
         </h2>
 
         {/* Centered Video Container with animation */}

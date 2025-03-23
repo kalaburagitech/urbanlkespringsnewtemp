@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-import Dock from './Dock/Dock';  // Import Dock component
+import { Link as ScrollLink } from 'react-scroll';  // Import scroll link for smooth scroll
+
 import GradientText from '../pages/GradientText/GradientText';
 
-// Define items for mobile dock navigation with scroll functionality
-const dockItems = [
+// Define items for mobile navigation with scroll functionality
+const navItems = [
   {
     icon: <i className="fas fa-home" />, label: 'Home', to: 'home'
   },
@@ -18,8 +18,6 @@ const dockItems = [
     icon: <i className="fas fa-envelope" />, label: 'Contact', to: 'contact'
   }
 ];
-
-
 
 function Header() {
   return (
@@ -38,10 +36,10 @@ function Header() {
                 className="h-[40px] w-[80px] object-contain" 
               />
               <span className="text-2xl font-bold text-blue-600 text-[#FFD700]">
-              <GradientText colors={["#ff8c00", "#ff0000", "#0000ff"]} animationSpeed={5}>
-                   URBANLAKESPRINGS
-             </GradientText>
-             </span>
+                <GradientText colors={["#ff8c00", "#ff0000", "#0000ff"]} animationSpeed={5}>
+                  NCC URBAN LAKE SPRINGS
+                </GradientText>
+              </span>
             </div>
 
             {/* Desktop Navigation */}
@@ -55,10 +53,19 @@ function Header() {
         </div>
       </header>
 
-      {/* Mobile Navigation with Dock Effect */}
-      <nav className="md:hidden mobile-nav fixed bottom-0 left-0 w-full bg-transparent shadow-none z-20">
-        {/* You can set the width as 100% to make sure it stretches the entire screen */}
-        <Dock items={dockItems}/>
+      {/* Mobile Navigation */}
+      <nav className="md:hidden fixed bottom-0 left-0 w-full bg-white shadow-lg z-20">
+        {/* Mobile bottom navigation */}
+        <div className="flex justify-around items-center py-3">
+          {navItems.map((item, index) => (
+            <ScrollLink key={index} to={item.to} smooth={true} duration={500} className="text-gray-600 hover:text-blue-600">
+              <div className="flex flex-col items-center">
+                <div className="text-2xl">{item.icon}</div>
+                <span className="text-xs mt-1">{item.label}</span>
+              </div>
+            </ScrollLink>
+          ))}
+        </div>
       </nav>
     </div>
   );

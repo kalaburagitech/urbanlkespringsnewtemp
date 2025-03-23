@@ -11,7 +11,7 @@ function PropertiesPage() {
       id: 1,
       title: "3 BHK Apartment",
       location: "Bangalore South",
-      price: "₹1.62 Cr - 2.30 Cr",
+      price: "₹1.70 Cr - 2.30 Cr",
       beds: 3,
       baths: 3,
       sqft: 1622,
@@ -21,7 +21,7 @@ function PropertiesPage() {
       id: 2,
       title: "3 BHK Apartment",
       location: "Bangalore South",
-      price: "₹1.62 Cr - 2.30 Cr",
+      price: "₹1.70 Cr - 2.30 Cr",
       beds: 3,
       baths: 3,
       sqft: 1622,
@@ -31,7 +31,7 @@ function PropertiesPage() {
       id: 3,
       title: "3.5 BHK Apartment",
       location: "Bangalore South",
-      price: "₹1.62 Cr - 2.30 Cr",
+      price: "₹1.70 Cr - 2.30 Cr",
       beds: 3,
       baths: 3,
       sqft: 2168,
@@ -48,7 +48,7 @@ function PropertiesPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 ">
       <h1 className="text-4xl font-bold text-center mb-12">
         <GradientText colors={["#ff8c00", "#ff0000", "#0000ff"]} animationSpeed={5}>
           Properties
